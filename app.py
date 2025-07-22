@@ -53,5 +53,6 @@ def generate_java():
     return jsonify({"javaCode": output})
 
 if __name__ == "__main__":
+    print("Running app on port", os.environ.get("PORT", 10000))
     port = int(os.environ.get("PORT", 10000))  # Render會給PORT環境變數
     app.run(host="0.0.0.0", port=port)
